@@ -1,3 +1,27 @@
-[
-  {"name": "kalshi-stub-job", "schedule": "30 12 * * *", "script": "kalshi_stub.sh", "no_agent": true, "paused": true}
-]
+{
+  "jobs": [
+    {
+      "id": "5b2c1f7a9e01",
+      "name": "kalshi-stub-job",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "script": "kalshi_stub.sh",
+      "no_agent": true,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 12 * * *",
+        "display": "30 12 * * *"
+      },
+      "schedule_display": "30 12 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "deliver": "local"
+    }
+  ],
+  "updated_at": "2026-10-17T12:00:00-04:00"
+}
