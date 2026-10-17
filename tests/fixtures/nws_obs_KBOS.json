@@ -1,0 +1,3401 @@
+{
+ "@context": [
+  "https://geojson.org/geojson-ld/geojson-context.jsonld",
+  {
+   "@version": "1.1",
+   "@vocab": "https://api.weather.gov/ontology#",
+   "bearing": {
+    "@type": "s:QuantitativeValue"
+   },
+   "city": "s:addressLocality",
+   "county": {
+    "@type": "@id"
+   },
+   "distance": {
+    "@id": "s:Distance",
+    "@type": "s:QuantitativeValue"
+   },
+   "forecastGridData": {
+    "@type": "@id"
+   },
+   "forecastOffice": {
+    "@type": "@id"
+   },
+   "geo": "http://www.opengis.net/ont/geosparql#",
+   "geometry": {
+    "@id": "s:GeoCoordinates",
+    "@type": "geo:wktLiteral"
+   },
+   "publicZone": {
+    "@type": "@id"
+   },
+   "s": "https://schema.org/",
+   "state": "s:addressRegion",
+   "unit": "http://codes.wmo.int/common/unit/",
+   "unitCode": {
+    "@id": "s:unitCode",
+    "@type": "@id"
+   },
+   "value": {
+    "@id": "s:value"
+   },
+   "wx": "https://api.weather.gov/ontology#"
+  }
+ ],
+ "features": [
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T18:35:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T18:35:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102133.48
+    },
+    "cloudLayers": [
+     {
+      "amount": "FEW",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 914.4
+      }
+     },
+     {
+      "amount": "FEW",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 1432.56
+      }
+     },
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3657.6
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/sct?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": null
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 9
+    },
+    "textDescription": "Partly Cloudy",
+    "timestamp": "2026-10-17T18:35:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "windDirection": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": null
+    },
+    "windGust": {
+     "qualityControl": "S",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 42.588
+    },
+    "windSpeed": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": null
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T18:30:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T18:30:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102099.62
+    },
+    "cloudLayers": [
+     {
+      "amount": "FEW",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 914.4
+      }
+     },
+     {
+      "amount": "FEW",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 1432.56
+      }
+     },
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3657.6
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/sct?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": null
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 10
+    },
+    "textDescription": "Partly Cloudy",
+    "timestamp": "2026-10-17T18:30:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 320
+    },
+    "windGust": {
+     "qualityControl": "S",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 33.336
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 24.084
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T18:25:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T18:25:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102099.62
+    },
+    "cloudLayers": [
+     {
+      "amount": "FEW",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 914.4
+      }
+     },
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 1432.56
+      }
+     },
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3657.6
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": -2
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/sct?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": 46.042482901757
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 9
+    },
+    "textDescription": "Partly Cloudy",
+    "timestamp": "2026-10-17T18:25:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 5.595139458671111
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 330
+    },
+    "windGust": {
+     "qualityControl": "S",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 38.88
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 25.92
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T18:20:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T18:20:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102099.62
+    },
+    "cloudLayers": [
+     {
+      "amount": "FEW",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 914.4
+      }
+     },
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 1432.56
+      }
+     },
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3657.6
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": -2
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/sct?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": 46.042482901757
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 9
+    },
+    "textDescription": "Partly Cloudy",
+    "timestamp": "2026-10-17T18:20:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 5.311333522465556
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 320
+    },
+    "windGust": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": null
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 29.628
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T18:15:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T18:15:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102065.75
+    },
+    "cloudLayers": [
+     {
+      "amount": "FEW",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 914.4
+      }
+     },
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 1432.56
+      }
+     },
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3657.6
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": -2
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/sct?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": 46.042482901757
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 9
+    },
+    "textDescription": "Partly Cloudy",
+    "timestamp": "2026-10-17T18:15:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 5.447879156730555
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 330
+    },
+    "windGust": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": null
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 27.792
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T18:10:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T18:10:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102065.75
+    },
+    "cloudLayers": [
+     {
+      "amount": "FEW",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 914.4
+      }
+     },
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 1432.56
+      }
+     },
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3657.6
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/sct?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": null
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 9
+    },
+    "textDescription": "Partly Cloudy",
+    "timestamp": "2026-10-17T18:10:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 5.447879156730555
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 330
+    },
+    "windGust": {
+     "qualityControl": "S",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 40.752
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 27.792
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T18:05:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T18:05:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102133.48
+    },
+    "cloudLayers": [
+     {
+      "amount": "FEW",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 914.4
+      }
+     },
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 1432.56
+      }
+     },
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3657.6
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/wind_sct?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": null
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 9
+    },
+    "textDescription": "Partly Cloudy and Windy",
+    "timestamp": "2026-10-17T18:05:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 5.179242640121666
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 330
+    },
+    "windGust": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": null
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 31.5
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T18:00:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T18:00:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102099.62
+    },
+    "cloudLayers": [
+     {
+      "amount": "FEW",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 914.4
+      }
+     },
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 1432.56
+      }
+     },
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3657.6
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/wind_sct?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": null
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 9
+    },
+    "textDescription": "Partly Cloudy and Windy",
+    "timestamp": "2026-10-17T18:00:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 5.055949024177778
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 330
+    },
+    "windGust": {
+     "qualityControl": "S",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 50.004
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 33.336
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:55:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:55:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102065.75
+    },
+    "cloudLayers": [
+     {
+      "amount": "FEW",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 914.4
+      }
+     },
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 1432.56
+      }
+     },
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3657.6
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": -3
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/sct?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": 42.756875463816
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 9
+    },
+    "textDescription": "Partly Cloudy",
+    "timestamp": "2026-10-17T17:55:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "windDirection": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": null
+    },
+    "windGust": {
+     "qualityControl": "S",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 46.296
+    },
+    "windSpeed": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": null
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.03,
+     42.37
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:54:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:54:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102070
+    },
+    "cloudLayers": [
+     {
+      "amount": "FEW",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 910
+      }
+     },
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 1430
+      }
+     },
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3660
+      }
+     },
+     {
+      "amount": "BKN",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 5180
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 9
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/wind_bkn?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "precipitationLast6Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "precipitationLastHour": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "KBOS 171754Z 33018G25KT 10SM FEW030 SCT047 SCT120 BKN170 09/M03 A3014 RMK AO2 PK WND 33028/1734 SLP206 T00941028 10106 20083 53014",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": null
+    },
+    "seaLevelPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102060
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 9.4
+    },
+    "textDescription": "Mostly Cloudy and Windy",
+    "timestamp": "2026-10-17T17:54:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16090
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 5.5730281848338885
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 330
+    },
+    "windGust": {
+     "qualityControl": "S",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 46.44
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 33.48
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:50:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:50:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102065.75
+    },
+    "cloudLayers": [
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 1402.08
+      }
+     },
+     {
+      "amount": "BKN",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3657.6
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": -3
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/bkn?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": 42.756875463816
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 9
+    },
+    "textDescription": "Mostly Cloudy",
+    "timestamp": "2026-10-17T17:50:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 5.447879156730555
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 320
+    },
+    "windGust": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": null
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 27.792
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:45:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:45:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102065.75
+    },
+    "cloudLayers": [
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 1402.08
+      }
+     },
+     {
+      "amount": "BKN",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3657.6
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": -3
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/wind_bkn?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": 42.756875463816
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 9
+    },
+    "textDescription": "Mostly Cloudy and Windy",
+    "timestamp": "2026-10-17T17:45:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 5.179242640121666
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 310
+    },
+    "windGust": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": null
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 31.5
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:40:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:40:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102065.75
+    },
+    "cloudLayers": [
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 1341.12
+      }
+     },
+     {
+      "amount": "BKN",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3657.6
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": -3
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/bkn?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": 39.979395374725
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 10
+    },
+    "textDescription": "Mostly Cloudy",
+    "timestamp": "2026-10-17T17:40:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 320
+    },
+    "windGust": {
+     "qualityControl": "S",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 44.46
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 29.628
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:30:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:30:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102065.75
+    },
+    "cloudLayers": [
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 1341.12
+      }
+     },
+     {
+      "amount": "BKN",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3657.6
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/wind_bkn?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": null
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 10
+    },
+    "textDescription": "Mostly Cloudy and Windy",
+    "timestamp": "2026-10-17T17:30:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 340
+    },
+    "windGust": {
+     "qualityControl": "S",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 48.168
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 35.172
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:25:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:25:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102065.75
+    },
+    "cloudLayers": [
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 1341.12
+      }
+     },
+     {
+      "amount": "BKN",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3657.6
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/wind_bkn?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": null
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 10
+    },
+    "textDescription": "Mostly Cloudy and Windy",
+    "timestamp": "2026-10-17T17:25:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 310
+    },
+    "windGust": {
+     "qualityControl": "S",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 40.752
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 31.5
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:20:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:20:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102065.75
+    },
+    "cloudLayers": [
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 1341.12
+      }
+     },
+     {
+      "amount": "BKN",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3657.6
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/bkn?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": null
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 10
+    },
+    "textDescription": "Mostly Cloudy",
+    "timestamp": "2026-10-17T17:20:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 320
+    },
+    "windGust": {
+     "qualityControl": "S",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 38.88
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 29.628
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:15:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:15:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102065.75
+    },
+    "cloudLayers": [
+     {
+      "amount": "SCT",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 1341.12
+      }
+     },
+     {
+      "amount": "BKN",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3657.6
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/bkn?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": null
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 10
+    },
+    "textDescription": "Mostly Cloudy",
+    "timestamp": "2026-10-17T17:15:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 300
+    },
+    "windGust": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": null
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 27.792
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:10:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:10:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102031.89
+    },
+    "cloudLayers": [
+     {
+      "amount": "FEW",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 1341.12
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/few?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": null
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 10
+    },
+    "textDescription": "Mostly Clear",
+    "timestamp": "2026-10-17T17:10:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 320
+    },
+    "windGust": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": null
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 27.792
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:05:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:05:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102065.75
+    },
+    "cloudLayers": [
+     {
+      "amount": "CLR",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3810
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": -1
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/skc?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": 43.344699599247
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 11
+    },
+    "textDescription": "Clear",
+    "timestamp": "2026-10-17T17:05:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 310
+    },
+    "windGust": {
+     "qualityControl": "S",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 38.88
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 29.628
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:00:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T17:00:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102031.89
+    },
+    "cloudLayers": [
+     {
+      "amount": "FEW",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 1341.12
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/wind_few?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": null
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 10
+    },
+    "textDescription": "Mostly Clear and Windy",
+    "timestamp": "2026-10-17T17:00:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 310
+    },
+    "windGust": {
+     "qualityControl": "S",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 40.752
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 31.5
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T16:55:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T16:55:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 101998.03
+    },
+    "cloudLayers": [
+     {
+      "amount": "FEW",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 1341.12
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 0
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/few?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": 49.831135182182
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 10
+    },
+    "textDescription": "Mostly Clear",
+    "timestamp": "2026-10-17T16:55:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 330
+    },
+    "windGust": {
+     "qualityControl": "S",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 35.172
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 22.212
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.03,
+     42.37
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T16:54:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T16:54:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102000
+    },
+    "cloudLayers": [
+     {
+      "amount": "FEW",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 1010
+      }
+     },
+     {
+      "amount": "BKN",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3660
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 0
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 9
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/bkn?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "precipitationLast6Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "precipitationLastHour": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "KBOS 171654Z 33013G28KT 10SM FEW033 BKN120 10/00 A3012 RMK AO2 PK WND 33028/1646 SLP198 T01000000",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": 49.831135182182
+    },
+    "seaLevelPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 101980
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 10
+    },
+    "textDescription": "Mostly Cloudy",
+    "timestamp": "2026-10-17T16:54:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16090
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 330
+    },
+    "windGust": {
+     "qualityControl": "S",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 51.84
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 24.12
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T16:50:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T16:50:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 101964.16
+    },
+    "cloudLayers": [
+     {
+      "amount": "FEW",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 1005.84
+      }
+     },
+     {
+      "amount": "BKN",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3657.6
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 0
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/bkn?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": 49.831135182182
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 10
+    },
+    "textDescription": "Mostly Cloudy",
+    "timestamp": "2026-10-17T16:50:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 350
+    },
+    "windGust": {
+     "qualityControl": "S",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 40.752
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 27.792
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T16:45:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T16:45:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 101964.16
+    },
+    "cloudLayers": [
+     {
+      "amount": "CLR",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3810
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 1
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/skc?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": 53.563172947337
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 10
+    },
+    "textDescription": "Clear",
+    "timestamp": "2026-10-17T16:45:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 330
+    },
+    "windGust": {
+     "qualityControl": "S",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 35.172
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 22.212
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T16:40:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T16:40:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 101964.16
+    },
+    "cloudLayers": [
+     {
+      "amount": "CLR",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3810
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 1
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/skc?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": 57.284355946112
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 9
+    },
+    "textDescription": "Clear",
+    "timestamp": "2026-10-17T16:40:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 5.748517571131111
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 320
+    },
+    "windGust": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": null
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 24.084
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T16:35:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T16:35:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 101998.03
+    },
+    "cloudLayers": [
+     {
+      "amount": "CLR",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3810
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 1
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/skc?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": 53.563172947337
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 10
+    },
+    "textDescription": "Clear",
+    "timestamp": "2026-10-17T16:35:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 340
+    },
+    "windGust": {
+     "qualityControl": "S",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 29.628
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 20.376
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T16:25:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T16:25:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102031.89
+    },
+    "cloudLayers": [
+     {
+      "amount": "CLR",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3810
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 0
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/skc?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": 53.293043109703
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 9
+    },
+    "textDescription": "Clear",
+    "timestamp": "2026-10-17T16:25:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 5.447879156730555
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 330
+    },
+    "windGust": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": null
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 27.792
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T16:20:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T16:20:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102031.89
+    },
+    "cloudLayers": [
+     {
+      "amount": "CLR",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3810
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 0
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/skc?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": 53.293043109703
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 9
+    },
+    "textDescription": "Clear",
+    "timestamp": "2026-10-17T16:20:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 5.311333522465556
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 310
+    },
+    "windGust": {
+     "qualityControl": "S",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 40.752
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 29.628
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T16:15:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T16:15:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102031.89
+    },
+    "cloudLayers": [
+     {
+      "amount": "CLR",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3810
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 1
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/skc?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": 57.284355946112
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 9
+    },
+    "textDescription": "Clear",
+    "timestamp": "2026-10-17T16:15:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 5.915371394988333
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 320
+    },
+    "windGust": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": null
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 22.212
+    }
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     -71.01,
+     42.36
+    ],
+    "type": "Point"
+   },
+   "id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T16:10:00+00:00",
+   "properties": {
+    "@id": "https://api.weather.gov/stations/KBOS/observations/2026-10-17T16:10:00+00:00",
+    "@type": "wx:ObservationStation",
+    "barometricPressure": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:Pa",
+     "value": 102031.89
+    },
+    "cloudLayers": [
+     {
+      "amount": "CLR",
+      "base": {
+       "unitCode": "wmoUnit:m",
+       "value": 3810
+      }
+     }
+    ],
+    "dewpoint": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 1
+    },
+    "elevation": {
+     "unitCode": "wmoUnit:m",
+     "value": 70
+    },
+    "heatIndex": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "icon": "https://api.weather.gov/icons/land/day/skc?size=medium",
+    "maxTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "minTemperatureLast24Hours": {
+     "unitCode": "wmoUnit:degC",
+     "value": null
+    },
+    "precipitationLast3Hours": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:mm",
+     "value": null
+    },
+    "presentWeather": [],
+    "rawMessage": "",
+    "relativeHumidity": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:percent",
+     "value": 57.284355946112
+    },
+    "seaLevelPressure": {
+     "qualityControl": "Z",
+     "unitCode": "wmoUnit:Pa",
+     "value": null
+    },
+    "station": "https://api.weather.gov/stations/KBOS",
+    "stationId": "KBOS",
+    "stationName": "Boston, Logan International Airport",
+    "temperature": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 9
+    },
+    "textDescription": "Clear",
+    "timestamp": "2026-10-17T16:10:00+00:00",
+    "visibility": {
+     "qualityControl": "C",
+     "unitCode": "wmoUnit:m",
+     "value": 16093.44
+    },
+    "windChill": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degC",
+     "value": 6.090914293880555
+    },
+    "windDirection": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:degree_(angle)",
+     "value": 310
+    },
+    "windGust": {
+     "qualityControl": "S",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 29.628
+    },
+    "windSpeed": {
+     "qualityControl": "V",
+     "unitCode": "wmoUnit:km_h-1",
+     "value": 20.376
+    }
+   },
+   "type": "Feature"
+  }
+ ],
+ "pagination": {
+  "next": "https://api.weather.gov/stations/KBOS/observations?cursor=eyJzIjoiMjAyNi0xMC0xN1QxNjoxMDowMCswMDowMCJ9"
+ },
+ "type": "FeatureCollection"
+}

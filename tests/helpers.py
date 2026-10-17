@@ -2,6 +2,7 @@
 import json
 import os
 import tempfile
+import unittest
 from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
@@ -46,3 +47,22 @@ class FrozenClock:
 
     def advance(self, delta):
         self.now = self.now + delta
+
+
+class IsolatedHomeCase(unittest.TestCase):
+    """Points HERMES_HOME at a throwaway directory for every test, so nothing can reach a
+    real Hermes home (CLAUDE.md: unit tests never touch a real $HERMES_HOME)."""
+
+    def setUp(self):
+        super().setUp()
+        self._home_tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self._home_tmp.cleanup)
+        self._old_home = os.environ.get("HERMES_HOME")
+        os.environ["HERMES_HOME"] = self._home_tmp.name
+        self.addCleanup(self._restore_home)
+
+    def _restore_home(self):
+        if self._old_home is None:
+            os.environ.pop("HERMES_HOME", None)
+        else:
+            os.environ["HERMES_HOME"] = self._old_home
