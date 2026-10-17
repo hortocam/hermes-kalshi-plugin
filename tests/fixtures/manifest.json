@@ -1,0 +1,272 @@
+{
+ "kalshi_429.json": {
+  "note": "body only; no Retry-After header was present",
+  "status": 429,
+  "url": "(observed in reference tool; not re-triggered)"
+ },
+ "kalshi_events_open_KXHIGHCHI.json": {
+  "bytes": 35593,
+  "fetched_at": "2026-10-17T18:49:40Z",
+  "sha256": "ac403993eb640c529269635b32b33dfb0f45206aef167e42c8ffaffa044c20fb",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXHIGHCHI&status=open&limit=2&with_nested_markets=true"
+ },
+ "kalshi_events_open_KXHIGHLAX.json": {
+  "bytes": 35719,
+  "fetched_at": "2026-10-17T18:49:44Z",
+  "sha256": "5d18bf69cc28cd2fce8e1057ebe563bc94c51c77928953309aa807e9d078963c",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXHIGHLAX&status=open&limit=2&with_nested_markets=true"
+ },
+ "kalshi_events_open_KXHIGHNY.json": {
+  "bytes": 35740,
+  "fetched_at": "2026-10-17T18:49:37Z",
+  "sha256": "a512f713614880dea9c4132ad98395a3f4bc777d7e353e6b5d1a74c98221a097",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXHIGHNY&status=open&limit=2&with_nested_markets=true"
+ },
+ "kalshi_events_open_KXHIGHTBOS.json": {
+  "bytes": 35583,
+  "fetched_at": "2026-10-17T18:49:48Z",
+  "sha256": "1dafbd4fb5e4207087f74bdad2707efb6a2eff688aaf1ce06fa21435efc8fa74",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXHIGHTBOS&status=open&limit=2&with_nested_markets=true"
+ },
+ "kalshi_events_open_KXLOWTBOS.json": {
+  "bytes": 35502,
+  "fetched_at": "2026-10-17T18:49:50Z",
+  "sha256": "486d0db5881a0c987ea23e48d0269d0af516cddd26292cc3b8a9a6506ca2d7d7",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXLOWTBOS&status=open&limit=2&with_nested_markets=true"
+ },
+ "kalshi_events_open_KXLOWTCHI.json": {
+  "bytes": 35543,
+  "fetched_at": "2026-10-17T18:49:42Z",
+  "sha256": "22cf78ed5bc04b5e799d29276b30f00471cb11dd6f4d33b68574e15a70d5baf4",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXLOWTCHI&status=open&limit=2&with_nested_markets=true"
+ },
+ "kalshi_events_open_KXLOWTLAX.json": {
+  "bytes": 35630,
+  "fetched_at": "2026-10-17T18:49:46Z",
+  "sha256": "e717aca9f1fbc8fa839bf428efeaeb21279e5bcde22ce5d6865d333fbcde6d8b",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXLOWTLAX&status=open&limit=2&with_nested_markets=true"
+ },
+ "kalshi_events_open_KXLOWTNYC.json": {
+  "bytes": 35697,
+  "fetched_at": "2026-10-17T18:49:38Z",
+  "sha256": "f9cdd005d7f6e1d1247c42b107204f2a9cea8279a2ac8a09fae2ba98cf7f6301",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXLOWTNYC&status=open&limit=2&with_nested_markets=true"
+ },
+ "kalshi_events_settled_KXHIGHCHI.json": {
+  "bytes": 18396,
+  "fetched_at": "2026-10-17T18:49:41Z",
+  "sha256": "3d40d3464b1831d8e19c3e66f5344c869f23a0193d75073d5a8b00718386b64c",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXHIGHCHI&status=settled&limit=1&with_nested_markets=true"
+ },
+ "kalshi_events_settled_KXHIGHLAX.json": {
+  "bytes": 18466,
+  "fetched_at": "2026-10-17T18:49:45Z",
+  "sha256": "439643031ff6e76180291ac4dc76c54ba1ebbd7209e12adf0d2b245ae8f0ce58",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXHIGHLAX&status=settled&limit=1&with_nested_markets=true"
+ },
+ "kalshi_events_settled_KXHIGHNY.json": {
+  "bytes": 18452,
+  "fetched_at": "2026-10-17T18:49:37Z",
+  "sha256": "37e86cfd3b85ac4026ef85aad6e76b604e20f259ce649bb46751faa894a924fd",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXHIGHNY&status=settled&limit=1&with_nested_markets=true"
+ },
+ "kalshi_events_settled_KXHIGHTBOS.json": {
+  "bytes": 18407,
+  "fetched_at": "2026-10-17T18:49:49Z",
+  "sha256": "2adec086e6afd91a23f83f63333c12ea474d468c89bf80c910258d88242ca934",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXHIGHTBOS&status=settled&limit=1&with_nested_markets=true"
+ },
+ "kalshi_events_settled_KXLOWTBOS.json": {
+  "bytes": 18363,
+  "fetched_at": "2026-10-17T18:49:51Z",
+  "sha256": "4b74bbe6b27c47677e440a60e33ba592cc34066cc1f1d73c54be3108c231c374",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXLOWTBOS&status=settled&limit=1&with_nested_markets=true"
+ },
+ "kalshi_events_settled_KXLOWTCHI.json": {
+  "bytes": 18382,
+  "fetched_at": "2026-10-17T18:49:43Z",
+  "sha256": "6845209d48987c2d6d5822526d84d5af88e16c10a4a529d6d88d6ebe8ea56184",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXLOWTCHI&status=settled&limit=1&with_nested_markets=true"
+ },
+ "kalshi_events_settled_KXLOWTLAX.json": {
+  "bytes": 18429,
+  "fetched_at": "2026-10-17T18:49:47Z",
+  "sha256": "cb17b00fea8068abb57ea4b2b745b7d82c8b75767640b3e83abb227e45d2b1b5",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXLOWTLAX&status=settled&limit=1&with_nested_markets=true"
+ },
+ "kalshi_events_settled_KXLOWTNYC.json": {
+  "bytes": 18473,
+  "fetched_at": "2026-10-17T18:49:39Z",
+  "sha256": "d659719e57687b73022a557d41f6b236efd4124cabd87434804e3cb156280e1c",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXLOWTNYC&status=settled&limit=1&with_nested_markets=true"
+ },
+ "kalshi_orderbooks_KXHIGHCHI.json": {
+  "bytes": 6384,
+  "fetched_at": "2026-10-17T18:49:41Z",
+  "sha256": "01aee60b68eec5d6316c3ef7a26aeee35f073359dd82fc17787ff9a7fca22934",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets/orderbooks?tickers=KXHIGHCHI-26OCT17-T53&tickers=KXHIGHCHI-26OCT17-B53.5&tickers=KXHIGHCHI-26OCT17-B55.5&tickers=KXHIGHCHI-26OCT17-B57.5&tickers=KXHIGHCHI-26OCT17-B59.5&tickers=KXHIGHCHI-26OCT17-T60"
+ },
+ "kalshi_orderbooks_KXHIGHLAX.json": {
+  "bytes": 8047,
+  "fetched_at": "2026-10-17T18:49:45Z",
+  "sha256": "475cf7373d0019fc489a3f27caed9b4100c72b9c6b5081921e65410fbcefd124",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets/orderbooks?tickers=KXHIGHLAX-26OCT17-T88&tickers=KXHIGHLAX-26OCT17-B88.5&tickers=KXHIGHLAX-26OCT17-B90.5&tickers=KXHIGHLAX-26OCT17-B92.5&tickers=KXHIGHLAX-26OCT17-B94.5&tickers=KXHIGHLAX-26OCT17-T95"
+ },
+ "kalshi_orderbooks_KXHIGHNY.json": {
+  "bytes": 6693,
+  "fetched_at": "2026-10-17T18:49:38Z",
+  "sha256": "e820cb0b98facc4673cdbf85ecd611c89e50f0774beb8bcda5a3b143d820ea1d",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets/orderbooks?tickers=KXHIGHNY-26OCT17-T62&tickers=KXHIGHNY-26OCT17-B62.5&tickers=KXHIGHNY-26OCT17-B64.5&tickers=KXHIGHNY-26OCT17-B66.5&tickers=KXHIGHNY-26OCT17-B68.5&tickers=KXHIGHNY-26OCT17-T69"
+ },
+ "kalshi_orderbooks_KXHIGHTBOS.json": {
+  "bytes": 4647,
+  "fetched_at": "2026-10-17T18:49:49Z",
+  "sha256": "4fc4047bb0494075aa17a7f394cd2a8a6fb291efcb57f44d707ec964516d64c4",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets/orderbooks?tickers=KXHIGHTBOS-26OCT17-T59&tickers=KXHIGHTBOS-26OCT17-B59.5&tickers=KXHIGHTBOS-26OCT17-B61.5&tickers=KXHIGHTBOS-26OCT17-B63.5&tickers=KXHIGHTBOS-26OCT17-B65.5&tickers=KXHIGHTBOS-26OCT17-T66"
+ },
+ "kalshi_orderbooks_KXLOWTBOS.json": {
+  "bytes": 3620,
+  "fetched_at": "2026-10-17T18:49:51Z",
+  "sha256": "4b28e4100f4415f47691ce45372e3904aadd91319a346dab35261b64c20ace55",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets/orderbooks?tickers=KXLOWTBOS-26OCT17-T36&tickers=KXLOWTBOS-26OCT17-B36.5&tickers=KXLOWTBOS-26OCT17-B38.5&tickers=KXLOWTBOS-26OCT17-B40.5&tickers=KXLOWTBOS-26OCT17-B42.5&tickers=KXLOWTBOS-26OCT17-T43"
+ },
+ "kalshi_orderbooks_KXLOWTCHI.json": {
+  "bytes": 3355,
+  "fetched_at": "2026-10-17T18:49:43Z",
+  "sha256": "d27d305bdc3c5aabddae956109e8b2cec673381f0a044a1c2f11eca1072f78fb",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets/orderbooks?tickers=KXLOWTCHI-26OCT17-T33&tickers=KXLOWTCHI-26OCT17-B33.5&tickers=KXLOWTCHI-26OCT17-B35.5&tickers=KXLOWTCHI-26OCT17-B37.5&tickers=KXLOWTCHI-26OCT17-B39.5&tickers=KXLOWTCHI-26OCT17-T40"
+ },
+ "kalshi_orderbooks_KXLOWTLAX.json": {
+  "bytes": 4400,
+  "fetched_at": "2026-10-17T18:49:47Z",
+  "sha256": "afea50a8066f3fa30d5a3779643ed42c3be6338b273a4f38a565450efa3440d4",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets/orderbooks?tickers=KXLOWTLAX-26OCT17-T65&tickers=KXLOWTLAX-26OCT17-B65.5&tickers=KXLOWTLAX-26OCT17-B67.5&tickers=KXLOWTLAX-26OCT17-B69.5&tickers=KXLOWTLAX-26OCT17-B71.5&tickers=KXLOWTLAX-26OCT17-T72"
+ },
+ "kalshi_orderbooks_KXLOWTNYC.json": {
+  "bytes": 4061,
+  "fetched_at": "2026-10-17T18:49:39Z",
+  "sha256": "0d1c139fadf4e8f9dc05e6bab29014ffef7f3d9a0af7248d5f240f40d1ceea0d",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/markets/orderbooks?tickers=KXLOWTNYC-26OCT17-T39&tickers=KXLOWTNYC-26OCT17-B39.5&tickers=KXLOWTNYC-26OCT17-B41.5&tickers=KXLOWTNYC-26OCT17-B43.5&tickers=KXLOWTNYC-26OCT17-B45.5&tickers=KXLOWTNYC-26OCT17-T46"
+ },
+ "kalshi_series_KXHIGHCHI.json": {
+  "bytes": 1534,
+  "fetched_at": "2026-10-17T18:49:40Z",
+  "sha256": "6ed95c1541f2f34cdb243f39297c4f02fd55b8b8bcf4541e114cf7cd5294961b",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXHIGHCHI"
+ },
+ "kalshi_series_KXHIGHLAX.json": {
+  "bytes": 1538,
+  "fetched_at": "2026-10-17T18:49:44Z",
+  "sha256": "c35e0cab20f1c3b5471a5d06e4d8c326ba338dfce3982dc8380da9bfab6339b8",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXHIGHLAX"
+ },
+ "kalshi_series_KXHIGHNY.json": {
+  "bytes": 1529,
+  "fetched_at": "2026-10-17T18:49:36Z",
+  "sha256": "c0e807ecc19bf91a98037d8199127a4ffc0832837da94a789688e18cb8e300fd",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXHIGHNY"
+ },
+ "kalshi_series_KXHIGHTBOS.json": {
+  "bytes": 1537,
+  "fetched_at": "2026-10-17T18:49:48Z",
+  "sha256": "1f0d989e9aac25a54f6a0a39ac525c75fb3c80c002528ec5d5d2bf34eeafdbbb",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXHIGHTBOS"
+ },
+ "kalshi_series_KXLOWTBOS.json": {
+  "bytes": 1525,
+  "fetched_at": "2026-10-17T18:49:50Z",
+  "sha256": "38d0e21c339171bdd95df71f30b799159a5cf38ed6553d88fc7502f6e930e9b9",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXLOWTBOS"
+ },
+ "kalshi_series_KXLOWTCHI.json": {
+  "bytes": 1530,
+  "fetched_at": "2026-10-17T18:49:42Z",
+  "sha256": "d0f333e538d15c76a732e461ddc4849ae55cd7464b8b97733a63eec70d7439f8",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXLOWTCHI"
+ },
+ "kalshi_series_KXLOWTLAX.json": {
+  "bytes": 1528,
+  "fetched_at": "2026-10-17T18:49:46Z",
+  "sha256": "644249b6df8aaaa98cea5935f80cbcc4e8d2eb58f89970851db32471e3105bb0",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXLOWTLAX"
+ },
+ "kalshi_series_KXLOWTNYC.json": {
+  "bytes": 1529,
+  "fetched_at": "2026-10-17T18:49:38Z",
+  "sha256": "90d3b35b6df40763617f55b6e5a4879626ffd7e952ac9c02ab3b4fbb90aa2b9a",
+  "status": 200,
+  "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXLOWTNYC"
+ },
+ "nws_obs_KBOS.json": {
+  "bytes": 125242,
+  "fetched_at": "2026-10-17T18:50:03Z",
+  "sha256": "c15789a4005b47ddd8cea5da2fe0de09700efd7e1039cb95920c2825ba87a4af",
+  "status": 200,
+  "url": "https://api.weather.gov/stations/KBOS/observations?limit=30"
+ },
+ "nws_obs_KLAX.json": {
+  "bytes": 111272,
+  "fetched_at": "2026-10-17T18:50:04Z",
+  "sha256": "8bcebfdb31ba0c9832d2508d104d295fe495cf6444536569fbe53491bc9a072e",
+  "status": 200,
+  "url": "https://api.weather.gov/stations/KLAX/observations?limit=30"
+ },
+ "nws_obs_KMDW.json": {
+  "bytes": 117713,
+  "fetched_at": "2026-10-17T18:50:05Z",
+  "sha256": "608a0425c54e73a0bdd645bbd24b3a8bc30e0c0ce534c8ff67f256f09911a2d4",
+  "status": 200,
+  "url": "https://api.weather.gov/stations/KMDW/observations?limit=30"
+ },
+ "nws_obs_KNYC.json": {
+  "bytes": 130588,
+  "fetched_at": "2026-10-17T18:50:05Z",
+  "sha256": "bd74aa50933961476877743ac42e49a46a71c0d1fccdb8e56ed9e7af450cfb68",
+  "status": 200,
+  "url": "https://api.weather.gov/stations/KNYC/observations?limit=30"
+ },
+ "openmeteo_ensemble_4pts.json": {
+  "bytes": 156288,
+  "fetched_at": "2026-10-17T18:49:52Z",
+  "locations_in_order": [
+   "KBOS",
+   "KLAX",
+   "KMDW",
+   "KNYC"
+  ],
+  "sha256": "efccf71fe2a629c5e7c61ffeadc3b3ad320f219ccc2ae9dd6f23c5c31b343002",
+  "status": 200,
+  "url": "https://ensemble-api.open-meteo.com/v1/ensemble?latitude=42.36056,33.93806,41.78417,40.78333&longitude=-71.01056,-118.38889,-87.75528,-73.96667&hourly=temperature_2m&models=gfs025,ecmwf_ifs025&temperature_unit=fahrenheit&forecast_days=3&timezone=auto"
+ }
+}
