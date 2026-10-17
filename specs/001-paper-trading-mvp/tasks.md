@@ -81,12 +81,12 @@ Each phase ends with a checkpoint: tests green with command output captured, a P
 
 ### Tests for User Story 1
 - [x] T027 [P] [US1] Write `tests/test_kalshi_client.py`: repeated `tickers` params for `/markets/orderbooks` (not comma-separated), derived `yes_ask = 1 - best_no_bid` and `no_ask = 1 - best_yes_bid`, ladders sorted explicitly, `_dollars`/`_fp` strings preserved, deprecated `liquidity_dollars` ignored, lowercase `status` vs filter `open`, token-bucket pacing, exponential backoff with jitter on the recorded 429 fixture, call-budget exhaustion yields a recorded skip (FR-001, FR-002)
-- [ ] T028 [P] [US1] Write `tests/test_market_data_cli.py` for the `kalshi-market-data` script wrappers (JSON shape of `series`, `events`, `markets`, `book`, `settled`)
+- [x] T028 [P] [US1] Write `tests/test_market_data_cli.py` for the `kalshi-market-data` script wrappers (JSON shape of `series`, `events`, `markets`, `book`, `settled`)
 
 ### Implementation for User Story 1
 - [x] T029 [US1] Implement `lib/kalshi_paper/kalshi_client.py`: keyless client for `https://api.elections.kalshi.com/trade-api/v2` (`/series/{t}`, `/events?series_ticker=`, `/markets?event_ticker=`, `/markets/orderbooks`, `/markets/{t}`), global token bucket (`KALSHI_CLIENT_RPS`, default 5), backoff, per-slot call budget, no `/series` list calls, no auth surface
-- [ ] T030 [P] [US1] Create `skills/kalshi-market-data/SKILL.md` (frontmatter, when to use, quirks, verification) and `skills/kalshi-market-data/scripts/kalshi_data.py` thin wrapper; port the proven gotchas from the reference `kalshi-plugin-x` and credit it in `skills/kalshi-market-data/references/api-notes.md`
-- [ ] T031 [US1] Register the skill in `__init__.py` via `ctx.register_skill("kalshi-market-data", .../SKILL.md)` (dir-iterating loop that only registers directories containing `SKILL.md`)
+- [x] T030 [P] [US1] Create `skills/kalshi-market-data/SKILL.md` (frontmatter, when to use, quirks, verification) and `skills/kalshi-market-data/scripts/kalshi_data.py` thin wrapper; port the proven gotchas from the reference `kalshi-plugin-x` and credit it in `skills/kalshi-market-data/references/api-notes.md`
+- [x] T031 [US1] Register the skill in `__init__.py` via `ctx.register_skill("kalshi-market-data", .../SKILL.md)` (dir-iterating loop that only registers directories containing `SKILL.md`)
 
 **Checkpoint**: US1 tests green; live read of one series prints brackets and books with <= 4 Kalshi calls.
 
