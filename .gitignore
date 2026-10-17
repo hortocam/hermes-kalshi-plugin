@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# Spec Kit transient cache (regenerated on demand)
+.specify/integrations/.cache/
+
+# Runtime data
+plugin-data/
+*.db
+*.db-wal
+*.db-shm
+.venv/
+.worktrees/
+_transfer.tgz
