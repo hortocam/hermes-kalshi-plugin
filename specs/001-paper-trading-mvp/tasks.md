@@ -66,7 +66,7 @@ Each phase ends with a checkpoint: tests green with command output captured, a P
 - [x] T022 Implement `lib/kalshi_paper/store.py`: full DDL from data-model.md (all tables, constraints, indexes), `schema_version`, idempotent migration runner, WAL pragma, read-only connector, `insert ... on conflict` helpers
 - [x] T023 [P] Implement `lib/kalshi_paper/config.py` and finish `config/watches.default.json` loading (depends on T014, T022)
 - [x] T024 Implement `lib/kalshi_paper/run_ledger.py` with `runs`/`run_events` semantics from data-model.md (depends on T022)
-- [ ] T025 Implement `lib/kalshi_paper/cli.py` skeleton: argparse dispatcher, `--json`, exit codes 0/2/3/4, never prints secrets; command `init` seeds watches, default strategy version (contracts/strategy-config.md), and two accounts per watch ($100.00 real, $1,000.00 test) idempotently; test in `tests/test_cli_init.py` written first (quickstart A1)
+- [x] T025 Implement `lib/kalshi_paper/cli.py` skeleton: argparse dispatcher, `--json`, exit codes 0/2/3/4, never prints secrets; command `init` seeds watches, default strategy version (contracts/strategy-config.md), and two accounts per watch ($100.00 real, $1,000.00 test) idempotently; test in `tests/test_cli_init.py` written first (quickstart A1)
 - [ ] T026 [P] Write `tests/fixtures/capture.py` and capture recorded read-only responses into `tests/fixtures/` (Kalshi series/events/markets/orderbooks for all 8 series including a settled day, Open-Meteo ensemble for 4 points, NWS observations for 4 stations, and a recorded 429 body); no secrets are involved
 
 **Checkpoint**: `python3 -m unittest discover -s tests` green; `kalshi-paper init` creates 8 watches and 16 accounts; second run changes nothing.
