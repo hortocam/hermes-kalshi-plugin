@@ -13,3 +13,10 @@ plugin-data/
 .venv/
 .worktrees/
 _transfer.tgz
+
+# Local Claude Code settings (personal, not shared)
+.claude/settings.local.json
+snapshots/
+
+# IDE
+.idea/
