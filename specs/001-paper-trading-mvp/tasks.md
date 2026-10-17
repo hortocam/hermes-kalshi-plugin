@@ -56,14 +56,14 @@ Each phase ends with a checkpoint: tests green with command output captured, a P
 ### Tests first
 - [x] T015 [P] Write `tests/test_money.py`: dollars-string to micro-dollars and back, no float drift, half-cent cases, "`fill_price` in (0,1)" validation
 - [x] T016 [P] Write `tests/test_timeutil.py`: local standard-time day window for NYC/Chicago/LA/Boston, including DST (window is 1:00 AM to 12:59 AM next day during DST), spring-forward and fall-back dates, UTC conversion
-- [ ] T017 [P] Write `tests/test_store.py`: schema creation is idempotent; every CHECK/UNIQUE in data-model.md is enforced (`kind IN ('high','low')`, `scale IN ('real','test')`, `mode` constrained to `'paper'`, `UNIQUE(snapshot_id, market_ticker, model_id)`, `UNIQUE(prediction_id, account_id)`, `UNIQUE(intent_id, level_index)`, `UNIQUE(profile, slot_key, job)`); WAL on; read-only open cannot write
+- [x] T017 [P] Write `tests/test_store.py`: schema creation is idempotent; every CHECK/UNIQUE in data-model.md is enforced (`kind IN ('high','low')`, `scale IN ('real','test')`, `mode` constrained to `'paper'`, `UNIQUE(snapshot_id, market_ticker, model_id)`, `UNIQUE(prediction_id, account_id)`, `UNIQUE(intent_id, level_index)`, `UNIQUE(profile, slot_key, job)`); WAL on; read-only open cannot write
 - [ ] T018 [P] Write `tests/test_config.py`: `HERMES_HOME` resolution; root home derived from `<root>/profiles/<name>`; DB path `plugin-data/hermes-kalshi/data.db`; shared snapshot dir under the root; `--db` override
 - [ ] T019 [P] Write `tests/test_run_ledger.py`: `begin_run`/`finish_run`; second begin after `ok` returns `already_done`; skips recorded in `run_events`; concurrent begin yields one runner
 
 ### Implementation
 - [x] T020 [P] Implement `lib/kalshi_paper/money.py` (micro-dollar integer helpers) to pass T015
 - [x] T021 [P] Implement `lib/kalshi_paper/timeutil.py` (`zoneinfo`; LST-day window) to pass T016
-- [ ] T022 Implement `lib/kalshi_paper/store.py`: full DDL from data-model.md (all tables, constraints, indexes), `schema_version`, idempotent migration runner, WAL pragma, read-only connector, `insert ... on conflict` helpers
+- [x] T022 Implement `lib/kalshi_paper/store.py`: full DDL from data-model.md (all tables, constraints, indexes), `schema_version`, idempotent migration runner, WAL pragma, read-only connector, `insert ... on conflict` helpers
 - [ ] T023 [P] Implement `lib/kalshi_paper/config.py` and finish `config/watches.default.json` loading (depends on T014, T022)
 - [ ] T024 Implement `lib/kalshi_paper/run_ledger.py` with `runs`/`run_events` semantics from data-model.md (depends on T022)
 - [ ] T025 Implement `lib/kalshi_paper/cli.py` skeleton: argparse dispatcher, `--json`, exit codes 0/2/3/4, never prints secrets; command `init` seeds watches, default strategy version (contracts/strategy-config.md), and two accounts per watch ($100.00 real, $1,000.00 test) idempotently; test in `tests/test_cli_init.py` written first (quickstart A1)
