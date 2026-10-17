@@ -1,28 +1,33 @@
 # S8: fee formula vs published schedule (T013)
 
-**Status: PARTIAL.** Kalshi's official schedule (`kalshi.com/docs/kalshi-fee-schedule.pdf`) returned HTTP 429 to both curl and WebFetch on 2026-10-17, and was not retried. Everything below is reconciled against the series metadata plus secondary sources only. **Needs Cameron or Jarvis to read the official PDF** (see the checklist at the end) before T013 is ticked.
+**Status: PASS with one open sub-question (rounding unit, see below).**
 
-## What the live API says
-`GET /series/{ticker}` for all 8 series: `fee_type: "quadratic"`, `fee_multiplier: 1`. So `M = 1` for every watched series. (Source: live calls, 2026-10-17.)
+Source: Kalshi's official fee schedule PDF, saved by Cameron as `docs/kalshi-fee-schedule.pdf` ("Last updated and effective: July 7, 2026"). The site download returned HTTP 429 to the builder, so Cameron supplied the file. The PDF's text is glyph-encoded; the builder decoded it from its embedded ToUnicode maps (no tool installed). The PDF also points to `https://kalshi.com/fee-schedule` for scheduled upcoming fee changes: re-check before real trading.
 
-## Formula under test
-`fee = ceil_to_cent(M x 0.07 x C x P x (1-P))`, C contracts, P price in dollars. Hand-computed (not by the code under test):
+## Confirmed
+- General taker fee: `fees = round up(M x 0.07 x C x P x (1-P))`, P in dollars, C contracts, `M` default 1.
+- Maker fee: `round up(M x 0.0175 x C x P x (1-P))`, charged only for resting orders that later execute; **maker `M` defaults to 0** unless a series says otherwise. MVP paper fills are taker fills against visible asks (no resting orders), so maker fees do not apply.
+- No settlement, membership, or ACH fees.
+- Weather series are **not** in the "Non-Standard Fees" series list (decoded pages 6-11 contain no `KXHIGH*`/`KXLOWT*`), so they use the general schedule. This agrees with the live API (`fee_type: quadratic`, `fee_multiplier: 1` on all 8 series).
 
-| # | C | P | 0.07 x C x P x (1-P) | Fee |
-|---|---|---|---|---|
-| 1 | 100 | 0.50 | 0.07 x 100 x 0.25 = 1.75 | $1.75 |
-| 2 | 100 | 0.10 | 0.07 x 100 x 0.09 = 0.63 | $0.63 |
-| 3 | 100 | 0.55 | 0.07 x 100 x 0.2475 = 1.7325 | $1.74 |
-| 4 | 1 | 0.50 | 0.0175 | $0.02 |
-| 5 | 10 | 0.95 | 0.07 x 10 x 0.0475 = 0.03325 | $0.04 |
+## Hand cases vs the published table (page 4-5)
+| C | P | Hand value | Published |
+|---|---|---|---|
+| 100 | 0.50 | 0.07 x 100 x 0.25 = 1.75 -> $1.75 | $1.75 |
+| 100 | 0.10 | 0.63 -> $0.63 | $0.63 |
+| 100 | 0.55 | 1.7325 -> $1.74 | $1.74 |
+| 100 | 0.05 | 0.07 x 100 x 0.0475 = 0.3325 -> $0.34 | $0.34 |
+| 1 | 0.50 | 0.0175 -> $0.02 | $0.02 |
+| 1 | 0.95 | 0.07 x 0.0475 = 0.003325 -> $0.01 | $0.01 |
 
-Secondary sources (not authoritative) quote cases 1, 2 and 3 with the same results ($1.75, $0.63, $1.74): allium.so, sailgp.com fee page, pm.wiki. They also state a maker rate of 0.0175 (a quarter of taker); the MVP assumes taker fills only (walking the visible book), so maker fees are out of scope.
+All six match the published table (it prints whole cents).
 
-## Per-level vs per-order rounding (still open)
-Ten 1-lot fills at $0.50: per-level rounding = 10 x $0.02 = **$0.20**; one 10-lot order = ceil(0.175) = **$0.18**. The working assumption stays **per-level, rounded up** (conservative; research.md R7). Cases 4 and 5 are the ones to compare with the official worked examples.
+## Rounding: what the text says vs what the table shows
+- The PDF defines "round up" as "rounds up such that the fee + positionCost is rounded to a **centicent**" ($0.0001).
+- The published table, however, shows fees rounded up to whole **cents** (e.g. 100 @ $0.05 = $0.34, where centicent rounding would give $0.3325 -> $0.3325).
+- Reading: the table is a cent-rounded display; the exchange's internal charge may be at centicent resolution on the order total. It cannot be resolved from the PDF alone.
 
-## Checklist for the official read (Cameron / Jarvis)
-1. Confirm the 0.07 taker coefficient and that climate/weather series use the general schedule (no separate rate).
-2. Confirm the rounding unit: per order vs per fill, and whether it is rounded up or to nearest.
-3. Confirm any rounding-refund or minimum-fee rule.
-4. Paste the relevant worked examples here and amend `research.md` R7 / `plan.md` only if they disagree.
+**Decision for the MVP (unchanged, conservative):** ceil to the cent, applied per price-level fill (never lower than either reading, and slightly pessimistic for multi-level fills). Impact is a few cents per trade at most; the paper P&L stays slightly conservative. Record this in `research.md` R7 as settled for the MVP; revisit with real fill fee data before any real-money spec (`fee_cost` on real fills would settle it, but that needs authenticated access, out of scope).
+
+## Per-level vs per-order (quantified)
+Ten 1-lot fills at $0.50: per-level cent rounding = $0.20; one 10-lot order = ceil(0.175) = $0.18; centicent on the total = $0.0175 x 10 = $0.175. The spread across readings is about 2 cents on a 10-lot, small against the 0.04 min net edge gate.
