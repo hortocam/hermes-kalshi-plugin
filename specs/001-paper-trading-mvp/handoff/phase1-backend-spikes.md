@@ -4,7 +4,7 @@
 **Tasks**: T006 (S1), T007 (S2), T008 (S3), T009 (S4), T011 (S6) in `tasks.md`.
 **Branch**: `003-setup-spikes`. Results are written **into this file** (the `Result` blocks below), then committed on that branch. Do not edit anything else except the optional spike notes named in each section.
 
-> **Status: all five spikes run on the backend 2026-10-17 (CT 914). S1 PARTIAL (desktop half only — needs Cameron), S2 PASS with caveats, S3 PASS, S4 PASS, S6 PASS.**
+> **Status: all five spikes run on the backend 2026-10-17 (CT 914); S1 PASS (Cameron confirmed the Desktop pane), S2 PASS with caveats, S3 PASS, S4 PASS, S6 PASS.**
 > Nothing in the repo's `spikes/` stubs was edited (per the ground rules) — the two code fixes the stubs need are recorded in the S1 deviations and applied only to the throwaway installed copy.
 
 ## Ground rules
@@ -63,7 +63,7 @@ Steps:
 
 ### Result: S1
 ```
-Status: PARTIAL   (every backend-side item PASS; step 8 is the only unverified item -> needs Desktop)
+Status: PASS      (all eight items verified; step 8 was completed by Cameron on his Mac — see below)
 
 Install method that worked:
   Copy the package directory into the profile's plugin root:
@@ -165,7 +165,25 @@ dashboard route result + HERMES_HOME seen by dashboard process:
        session cookie — neither is obtainable from the shell, and neither is needed: the mechanism above
        is the identical code path.
 
-desktop pane (done by: Jarvis | Cameron | not done): NOT DONE -> needs Desktop (Cameron).
+desktop pane (done by: Cameron): PASS — the pane renders and shows the ping JSON.
+  What it actually took, in order (all four steps were needed):
+    1. The stub's desktop half had to be FIXED first (see deviation 5). As shipped it could never
+       render: the loader requires a default export carrying `id` + `register(ctx)`, and the stub
+       exported a bare function, so the app rejected it with
+         "<origin> has no valid default HermesPlugin export"
+       (the loader's own check is `if (!plugin?.id || typeof plugin.register !== 'function')`).
+    2. The file had to be placed on the machine running the APP, via the STANDALONE door:
+         <Mac home>/.hermes/desktop-plugins/hermes-kalshi/plugin.js
+       The package door (the backend's plugins/hermes-kalshi/desktop/plugin.js) is exactly what the
+       app reports as "unavailable (remote backend)".
+    3. The desktop half is opt-in: it inventories in Capabilities -> Plugins but stays off until the
+       user toggles it; reload with Rescan / ⌘K -> Reload desktop plugins.
+    4. The agent half had to be enabled on the BACKEND (the default profile) for ctx.rest('/ping')
+       to answer rather than 404.
+  Note the app's own tooltip ("run Install from Git with the Desktop target checked") does not work
+  for this stub: Install from Git clones the repo's DEFAULT branch, and `main` carries no `spikes/`
+  tree at all — it exists only on this branch. For the real plugin (Phase 9) that route is viable
+  once the desktop half is on `main`.
   `desktop/plugin.js` passes the static admission lint ("desktop surface — stays inside the plugin SDK
   surface"), so nothing is known to be wrong with it, but the pane cannot be seen from the backend: the
   Desktop app runs on Cameron's Mac against this remote backend, and Electron loads a COPY from the *app
@@ -569,8 +587,9 @@ Remove scratch plugin, scratch profiles (`spike-s1`, S2/S3 scratch names), cron 
 ### Result: cleanup
 ```
 Removed:
-  * scratch plugin install : <scratch profile>/plugins/hermes-kalshi — the only hermes-kalshi anywhere
-                             under ~/.hermes. A follow-up find confirms none remain.
+  * scratch plugin install : <scratch profile>/plugins/hermes-kalshi. At cleanup time a follow-up find
+                             confirmed no hermes-kalshi anywhere under ~/.hermes; the stub was then
+                             reinstalled in the DEFAULT profile for step 8 (see "Left behind" below).
   * scratch profiles       : spike-s1, kalshi-bot-spike, kalshi-bot-spike-a, kalshi-bot-spike-b,
                              kalshi-bot-fresh (dirs + registry entries + their tombstones; spike-s1 also
                              had a session/routing identity purge via `profile purge-identity`)
@@ -590,6 +609,13 @@ Left behind (and why):
     routing index reloads from the DB on the next gateway restart. Not restarted on purpose — the live
     desktop session runs under the dashboard and a gateway bounce was not worth the risk. It clears itself;
     nothing to fix.
+  * the stub is TEMPORARILY INSTALLED IN THE DEFAULT PROFILE so Cameron's Desktop pane keeps answering:
+    ~/.hermes/plugins/hermes-kalshi/ (the FIXED stub) plus `hermes-kalshi` in the default profile's
+    plugins.enabled. Remove it once the real plugin supersedes it:
+        hermes plugins disable hermes-kalshi && rm -rf ~/.hermes/plugins/hermes-kalshi
+    The dashboard route was re-verified in exactly this configuration (root home, root plugins dir)
+    returning {"ok":true,"source":"hermes-kalshi spike"} with no restart — the app's 401 on an
+    unauthenticated curl is the auth gate, not a mounting problem.
   * `hermes profile list` shows exactly the 15 pre-existing profiles (default + engineer,
     firmware-engineer, kalshi-bot, kalshi-engineer, kalshi-reviewer, research, reviewer,
     soundscape-engineer, soundscape-qa, soundscape-reviewer, understudy-engineer, understudy-reviewer,
@@ -611,14 +637,14 @@ Confirmed untouched:
 
 | Spike | Status | Plan change needed? |
 |---|---|---|
-| S1 | PARTIAL — every backend item PASS; desktop pane unverified (needs the Desktop app on Cameron's Mac) | Yes — (a) the package's Desktop half must be delivered to the Mac (a remote backend cannot supply it); (b) stub fixes: `register_tool(toolset=…)`, handlers must return a **string**, `plugin.yaml` needs `provides_tools` |
+| S1 | **PASS** — every backend item verified and the Desktop pane renders (Cameron, on his Mac) | Yes — (a) the Desktop half needs a delivery step for the app's machine (a remote backend cannot supply it); (b) the stub fixes, now applied: `register_tool(toolset=…)`, handlers return a **string**, `plugin.yaml` needs `provides_tools`, and the desktop half must default-export the plugin OBJECT |
 | S2 | PASS (with caveats) | Yes — `cron/jobs.json` must be the canonical `{"jobs":[…],"updated_at":…}` store; the distribution's `config.yaml` must carry model/provider/timezone/secrets or the profile is inert; `--clone` carries neither cron jobs nor scripts, so `ops setup-ab` must create both; note the delete-then-reinstall-same-name tombstone trap |
 | S3 | PASS | No — but pin `timezone: America/New_York` in the shipped config, copy (never symlink) scripts into `$HERMES_HOME/scripts/`, expect ~41 s dispatch lateness, and have health read `cron incidents` |
 | S4 | PASS | No — 0 failures in 20 runs and across two profiles; the two-profile test must assert "one winner overall + same hash" |
 | S6 | PASS | No — 100 read-only opens from inside the dashboard process during a continuous writer, zero errors, read-only writes refused; filter `.deleted` out of the root-home profile scan |
 
 Open questions / surprises:
-1. **Desktop half (needs Cameron, S1 step 8).** The Desktop app is on his Mac and this backend is remote, so `desktop/plugin.js` can never reach it from CT 914. He has to install the Desktop half locally (Capabilities → Plugins → Install from Git with the Desktop component, or drop `plugin.js` into the Mac's `~/.hermes/desktop-plugins/hermes-kalshi/`) and confirm the pane shows the ping JSON. That is the only outstanding item in this handoff — everything else about the unified package (skill, tool, slash command, dashboard route, hot-mount without restart) is verified.
+1. **Desktop half — RESOLVED, and it is a build-time constraint rather than a one-off.** The Desktop app runs on Cameron's Mac against this remote backend, so the backend's `plugins/<id>/desktop/plugin.js` can never reach it (the app lists it as "unavailable (remote backend)", and its tooltip's Install-from-Git advice cannot help while the desktop half lives only on a feature branch). It was delivered by writing the fixed `plugin.js` into the Mac's standalone door (`~/.hermes/desktop-plugins/hermes-kalshi/plugin.js`) and reloading; the pane then rendered and its `ctx.rest('/ping')` returned the backend JSON. Phase 9 needs an explicit delivery step for the real desktop half.
 2. **One bad signature in `register()` silently costs every later registration.** The `toolset` omission produced no visible error in `hermes plugins list`, and validate's "capability probe" PASSES because it uses a permissive fake ctx. Only the real manager state and `hermes plugins doctor` surface it. Worth a build-side guard (register cheap items first, or wrap each registration).
 3. **Cron dispatch runs up to ~41 s late** on a 60 s ticker. Fine for the 07:00/12:30/16:30 slots and the +2/+12 min follow-ups, but snapshot-age gates and health checks should not assume the scheduled minute.
 4. **A profile-scoped cron with no `timezone` silently inherits the root config's zone**, and with no zone anywhere falls back to server-local time. Pin it in the distribution.
