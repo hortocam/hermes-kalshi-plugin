@@ -1,0 +1,3 @@
+[
+  {"name": "kalshi-stub-job", "schedule": "30 12 * * *", "script": "kalshi_stub.sh", "no_agent": true, "paused": true}
+]
