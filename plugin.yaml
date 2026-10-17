@@ -1,0 +1,13 @@
+name: hermes-kalshi
+version: 0.1.0
+description: Reviews Kalshi climate markets, builds probability predictions, and places paper trades only.
+capabilities: []
+config_schema:
+  slot_times:
+    type: string
+    default: "07:00,12:30,16:30"
+    description: Local ET slot times for snapshot/evaluate runs.
+  kalshi_rps:
+    type: number
+    default: 5
+    description: Client-side token bucket rate for public Kalshi reads (requests per second).

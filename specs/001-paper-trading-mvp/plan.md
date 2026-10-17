@@ -12,7 +12,7 @@ Technical approach: a pure-Python stdlib core library (`kalshi_paper`) with SQLi
 
 ## Technical Context
 
-**Language/Version**: Python 3.10+ compatible (backend version confirmed in spike S1); JavaScript ESM for the Desktop pane
+**Language/Version**: Python 3.10+ compatible (backend runs 3.14.7, confirmed in spike S1); JavaScript ESM for the Desktop pane
 **Primary Dependencies**: Python standard library only for core, CLI, tools; `fastapi` (provided by the Hermes dashboard environment) only in `dashboard/plugin_api.py`; `@hermes/plugin-sdk` and `react` only in `desktop/plugin.js`
 **Storage**: SQLite (WAL) per profile at `$HERMES_HOME/plugin-data/hermes-kalshi/data.db`; shared immutable snapshot files under `<root>/plugin-data/hermes-kalshi/snapshots/`
 **Testing**: `python3 -m unittest discover -s tests` (stdlib); hand-computed fixtures; recorded API fixtures; a no-auth contract test
@@ -145,11 +145,24 @@ Events considered per slot: each city's local-date today and tomorrow events (ma
 | S7 | Observation (METAR) vs Kalshi settlement discrepancy | table of 10+ settled days per station with differences |
 | S8 | Kalshi fee schedule vs formula and multi-level fee rounding | formula matches published schedule on 5 hand cases |
 
+## Spike Outcomes and Plan Amendments (2026-10-17)
+
+Notes in `spikes/S1..S8-*.md`; raw backend output in `handoff/phase1-backend-spikes.md`. S1-S4, S6 and S8 pass; S5 passes for call weight (3-day throttling observation and S7 data still accrue). No spike failed, but they changed the following (each is carried into the named tasks):
+
+1. **Desktop half delivery (S1, supersedes R1's claim).** The Desktop app runs on the user's Mac against a remote backend; it loads `desktop/plugin.js` only from `~/.hermes/desktop-plugins/hermes-kalshi/plugin.js` on the app machine (opt-in, then rescan). The backend copy is "unavailable (remote backend)". Delivery step: Install from Git (Desktop target) once the desktop half is on `main`, or copy the file by hand. The module must default-export an object with `id` and `register(ctx)`. (T076-T078)
+2. **Registration contract (S1).** `register_tool(name, toolset, schema, handler)` with `toolset="hermes_kalshi"`; handlers return JSON **strings**; `plugin.yaml` declares `provides_tools`; slash handlers take one `raw_args` string. `register()` aborts at its first exception and silently drops later registrations, so each registration is guarded and a test drives `register()` with a strict fake ctx. (T031, T036, T047)
+3. **Profile distribution (S2).** `cron/jobs.json` is the canonical `{"jobs":[...],"updated_at":...}` store (a bare array silently installs nothing). The distribution `config.yaml` must carry `model:`, `timezone: America/New_York`, the `secrets` env map, `hermes_requires`/`env_requires`, and `plugins.enabled`; the distribution can ship `plugins/` and `scripts/` too. `--clone` copies neither cron jobs nor scripts, so `ops setup-ab` creates both. Same-name reinstall after delete fails on a tombstone. (T067, T068, T086, T088)
+4. **Cron (S3).** Scripts are copied (never symlinked) into `$HERMES_HOME/scripts/`; timezone follows the profile's `timezone` with correct DST handling, so no UTC regeneration; dispatch can be ~41 s late; failures raise `cron incidents`, which health reads. (T067, T068, health)
+5. **Forecast horizon (S5).** DST market days end at 00:59 next morning; request `forecast_days=3`, not 2, so tomorrow's events are fully covered. (US3 weather/model tasks)
+6. **Fees (S8).** Formula and `M = 1` confirmed against the official schedule; rounding wording ("centicent") vs the cent-rounded table is unresolved, so the MVP keeps ceil-to-cent per level.
+7. **Dashboard (S6).** Read-only access during writes confirmed from inside the dashboard process; the profile scan skips `.deleted` and profiles without a DB.
+8. **Stations (T014).** Chicago settles on CLIMDW (Midway), not CLICHI.
+
 ## Risks and Open Items
 - Settlement source differs from the NWS METAR feed we nowcast with (S7); early nowcast edge may be overstated.
 - Open-Meteo free-tier terms are non-commercial; fine for paper trading, revisit before any real-money phase.
 - Model quality is unknown until about 3 weeks of scored data; the plan deliberately builds measurement first.
-- The unified package changes the interview's "separate desktop plugin" delivery shape (R1); needs user confirmation.
+- The unified package changes the interview's "separate desktop plugin" delivery shape (R1). Spike S1 showed the backend's copy of the desktop half never reaches a remote Desktop app; see Spike Outcomes.
 - Dashboard cannot approve proposals (read-only decision, R3, confirmed by the user for the MVP); approvals via slash command/tool. The user wants dashboard actions later (approve/reject proposals, pause watches, run a slot). Design implication: keep all mutations in `lib/kalshi_paper` command functions so future write routes in `plugin_api.py` call the same code with the same idempotency, add an auth/CSRF review, and record the acting user; deferred to a later spec.
 
 ## Complexity Tracking

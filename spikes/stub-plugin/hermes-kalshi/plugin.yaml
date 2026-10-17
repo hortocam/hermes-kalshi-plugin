@@ -1,0 +1,9 @@
+name: hermes-kalshi
+version: 0.0.1-spike
+description: S1 stub. Throwaway; not the real plugin.
+capabilities: []
+# `provides_tools` is not what makes an enabled plugin's tools load — it is what
+# `hermes plugins validate` (catalog admission) and the catalog/dashboard "N tools"
+# listing read. Without it validate exits 1 on "declared tools".
+provides_tools:
+  - kalshi_stub_ping

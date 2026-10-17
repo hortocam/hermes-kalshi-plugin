@@ -1,0 +1,85 @@
+{
+  "_note": "Verified 2026-10-17 against live rules_primary (T014). Settlement source per rules: The Weather Company. Chicago settles on CLIMDW (Midway), not O'Hare. lat/lon are api.weather.gov station coordinates.",
+  "watches": [
+    {
+      "series_ticker": "KXHIGHNY",
+      "kind": "high",
+      "city": "New York City",
+      "cli_code": "CLINYC",
+      "obs_station": "KNYC",
+      "lat": 40.78333,
+      "lon": -73.96667,
+      "tz": "America/New_York"
+    },
+    {
+      "series_ticker": "KXLOWTNYC",
+      "kind": "low",
+      "city": "New York City",
+      "cli_code": "CLINYC",
+      "obs_station": "KNYC",
+      "lat": 40.78333,
+      "lon": -73.96667,
+      "tz": "America/New_York"
+    },
+    {
+      "series_ticker": "KXHIGHCHI",
+      "kind": "high",
+      "city": "Chicago",
+      "cli_code": "CLIMDW",
+      "obs_station": "KMDW",
+      "lat": 41.78417,
+      "lon": -87.75528,
+      "tz": "America/Chicago"
+    },
+    {
+      "series_ticker": "KXLOWTCHI",
+      "kind": "low",
+      "city": "Chicago",
+      "cli_code": "CLIMDW",
+      "obs_station": "KMDW",
+      "lat": 41.78417,
+      "lon": -87.75528,
+      "tz": "America/Chicago"
+    },
+    {
+      "series_ticker": "KXHIGHLAX",
+      "kind": "high",
+      "city": "Los Angeles",
+      "cli_code": "CLILAX",
+      "obs_station": "KLAX",
+      "lat": 33.93806,
+      "lon": -118.38889,
+      "tz": "America/Los_Angeles"
+    },
+    {
+      "series_ticker": "KXLOWTLAX",
+      "kind": "low",
+      "city": "Los Angeles",
+      "cli_code": "CLILAX",
+      "obs_station": "KLAX",
+      "lat": 33.93806,
+      "lon": -118.38889,
+      "tz": "America/Los_Angeles"
+    },
+    {
+      "series_ticker": "KXHIGHTBOS",
+      "kind": "high",
+      "city": "Boston",
+      "cli_code": "CLIBOS",
+      "obs_station": "KBOS",
+      "lat": 42.36056,
+      "lon": -71.01056,
+      "tz": "America/New_York"
+    },
+    {
+      "series_ticker": "KXLOWTBOS",
+      "kind": "low",
+      "city": "Boston",
+      "cli_code": "CLIBOS",
+      "obs_station": "KBOS",
+      "lat": 42.36056,
+      "lon": -71.01056,
+      "tz": "America/New_York"
+    }
+  ]
+}
