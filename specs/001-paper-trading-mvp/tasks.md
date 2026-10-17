@@ -99,13 +99,13 @@ Each phase ends with a checkpoint: tests green with command output captured, a P
 **Independent Test**: enable a watch, run discovery; accounts exist and a new event is picked up without manual enrollment (quickstart A1, spec US2).
 
 ### Tests for User Story 2
-- [ ] T032 [P] [US2] Write `tests/test_watches.py`: enable creates accounts ($100.00 `real`, $1,000.00 `test`, `UNIQUE(watch_id, scale)`); pause/disable semantics; idempotent re-enable; a paused watch evaluates nothing but its open positions still settle (hook point asserted)
-- [ ] T033 [P] [US2] Write `tests/test_discovery.py`: parse recorded events/markets into `markets.int_low/int_high` ("tail `T94` greater" = 95..+inf; "tail `T87` less" = -inf..86; "band `B93.5`" = 93..94), `rules_hash` stable, series naming variants (`KXHIGHNY` vs `KXHIGHTBOS`) handled by discovery not hardcoding (FR-003)
+- [x] T032 [P] [US2] Write `tests/test_watches.py`: enable creates accounts ($100.00 `real`, $1,000.00 `test`, `UNIQUE(watch_id, scale)`); pause/disable semantics; idempotent re-enable; a paused watch evaluates nothing but its open positions still settle (hook point asserted)
+- [x] T033 [P] [US2] Write `tests/test_discovery.py`: parse recorded events/markets into `markets.int_low/int_high` ("tail `T94` greater" = 95..+inf; "tail `T87` less" = -inf..86; "band `B93.5`" = 93..94), `rules_hash` stable, series naming variants (`KXHIGHNY` vs `KXHIGHTBOS`) handled by discovery not hardcoding (FR-003)
 
 ### Implementation for User Story 2
-- [ ] T034 [US2] Implement `lib/kalshi_paper/watches.py` (create/update watches, accounts, strategy-version binding) and CLI `watch list|enable|pause|disable`
-- [ ] T035 [US2] Implement `lib/kalshi_paper/discovery.py` (events for each watch's local today and tomorrow; upsert `events`/`markets`; capture `rules_text` and `rules_hash`)
-- [ ] T036 [P] [US2] Create `skills/kalshi-ops/SKILL.md` covering watch management and chat usage; register in `__init__.py`; register `/kalshi-watch` via `ctx.register_command` using the handler signature recorded in spike S1
+- [x] T034 [US2] Implement `lib/kalshi_paper/watches.py` (create/update watches, accounts, strategy-version binding) and CLI `watch list|enable|pause|disable`
+- [x] T035 [US2] Implement `lib/kalshi_paper/discovery.py` (events for each watch's local today and tomorrow; upsert `events`/`markets`; capture `rules_text` and `rules_hash`)
+- [x] T036 [P] [US2] Create `skills/kalshi-ops/SKILL.md` covering watch management and chat usage; register in `__init__.py`; register `/kalshi-watch` via `ctx.register_command` using the handler signature recorded in spike S1
 
 **Checkpoint**: 8 watches discovered against fixtures; US2 tests green.
 
